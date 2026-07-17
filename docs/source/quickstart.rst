@@ -4,13 +4,12 @@ Quickstart
 Installation
 ------------
 
-GRID can be installed from source:
+GRID is available on PyPI:
 
 .. code-block:: bash
 
-   git clone https://github.com/domain-independent-dp/grid.git
-   cd grid
-   pip install -e .
+   pip install pygridopt
+
 
 A first model
 -------------
