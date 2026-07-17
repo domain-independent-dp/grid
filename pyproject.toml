@@ -45,7 +45,7 @@ dependencies = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/domain-independent-dp/grid"
+Documentation = "https://pygridopt.readthedocs.io"
 Repository = "https://github.com/domain-independent-dp/grid"
 Issues = "https://github.com/domain-independent-dp/grid/issues"
 Paper = "https://doi.org/10.4230/LIPIcs.CP.2026.26"
