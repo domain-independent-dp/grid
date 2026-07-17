@@ -61,28 +61,28 @@ distances.
 Step by step
 ------------
 
-* :class:`~grid.RoutingModel` is the top-level container of the model.
-* :meth:`~grid.RoutingModel.add_vehicle_type` registers a homogeneous fleet
+:class:`~grid.RoutingModel` is the top-level container of the model.
+:meth:`~grid.RoutingModel.add_vehicle_type` registers a homogeneous fleet
   with the given count and capacity.
-* :meth:`~grid.RoutingModel.add_node` adds a vertex of the routing graph,
+:meth:`~grid.RoutingModel.add_node` adds a vertex of the routing graph,
   marked as a depot or carrying a customer demand.
-* :meth:`~grid.RoutingModel.add_edge` adds a directed arc with a travel
+:meth:`~grid.RoutingModel.add_edge` adds a directed arc with a travel
   attribute (here, ``distance``).
-* :meth:`~grid.RoutingModel.set_objective` selects a built-in objective
+:meth:`~grid.RoutingModel.set_objective` selects a built-in objective
   metric.
-* :meth:`~grid.RoutingModel.solve` compiles the model to DIDP and runs the
+:meth:`~grid.RoutingModel.solve` compiles the model to DIDP and runs the
   chosen solver, returning a dictionary with the optimality status, the
   cost, the best dual bound, and the routes.
 
 Next steps
 ----------
 
-* :doc:`modelling-elements` introduces the four core classes and their
+:doc:`modelling-elements` introduces the four core classes and their
   relationships.
-* :doc:`native-features` describes the predefined modelling primitives that
+:doc:`native-features` describes the predefined modelling primitives that
   cover common VRP variants (CVRP, VRPTW, PDPTW, ...) and walks through a
   full PDPTW example.
-* :doc:`custom-features` shows how to declare user-defined variables and
+:doc:`custom-features` shows how to declare user-defined variables and
   expressions for variants that go beyond the native primitives, with a
   full Electric Capacitated VRP (ECVRP) example.
-* :doc:`api-reference` provides the complete Python API reference.
+:doc:`api-reference` provides the complete Python API reference.
