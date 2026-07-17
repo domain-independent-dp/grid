@@ -72,21 +72,6 @@ The documentation is available at
 quickstart, a guide to native and custom features with worked PDPTW and
 ECVRP examples, and an API reference.
 
-To build it locally:
-
-```bash
-pip install -e ".[docs]"
-cd docs
-make html
-```
-
-The pages are generated in `docs/build/html`. Alternatively, with
-[Hatch](https://hatch.pypa.io/) installed:
-
-```bash
-hatch run docs:build
-```
-
 ## Citation
 
 If you use GRID in your research, please cite:
