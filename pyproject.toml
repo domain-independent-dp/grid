@@ -1,0 +1,116 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pygridopt"
+version = "0.1.0"
+description = "Graph-based Modelling Interface for Domain-Independent Dynamic Programming"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+    {name = "Fabio Giordana"},
+    {name = "Zeynep Kiziltan"},
+    {name = "Ryo Kuroiwa"},
+]
+keywords = [
+    "vehicle-routing",
+    "dynamic-programming",
+    "domain-independent-dp",
+    "didp",
+    "optimization",
+    "operations-research",
+    "vrp",
+    "cvrp",
+    "pdptw",
+    "ecvrp",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "didppy>=0.10",
+    "networkx>=3.0",
+    "numpy>=1.24",
+]
+
+[project.urls]
+Documentation = "https://github.com/domain-independent-dp/grid"
+Repository = "https://github.com/domain-independent-dp/grid"
+Issues = "https://github.com/domain-independent-dp/grid/issues"
+Paper = "https://doi.org/10.4230/LIPIcs.CP.2026.26"
+
+[project.optional-dependencies]
+docs = [
+    "sphinx>=7.0",
+    "sphinx_rtd_theme",
+    "sphinx-autodoc-typehints",
+    "sphinx-autobuild",
+]
+dev = [
+    "ruff",
+    "build",
+    "twine",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["grid"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "grid/",
+    "README.md",
+    "LICENSE",
+    "pyproject.toml",
+]
+
+[tool.hatch.envs.docs]
+dependencies = [
+    "sphinx>=7.0",
+    "sphinx_rtd_theme",
+    "sphinx-autodoc-typehints",
+    "sphinx-autobuild",
+]
+
+[tool.hatch.envs.docs.scripts]
+build = "sphinx-build -b html docs/source docs/build/html"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E", "W", "F", "I", "D", "UP", "B",
+]
+ignore = [
+    "E501",
+    "D105",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*" = ["D"]
+"docs/*" = ["D"]
+"grid/didp_converter.py" = ["D"]
+"grid/expressions_manager.py" = ["D"]
+"grid/features_managers.py" = ["D"]
+"grid/objective_managers.py" = ["D"]
+"grid/structure_managers.py" = ["D", "F403", "F405"]
+
+[tool.ruff.format]
+quote-style = "double"
+docstring-code-format = true
