@@ -10,7 +10,6 @@ GRID is available on PyPI:
 
    pip install pygridopt
 
-
 A first model
 -------------
 
