@@ -17,16 +17,14 @@ GRID was introduced at CP 2026; see [Citation](#citation) for details.
 
 ## Installation
 
-GRID requires Python >= 3.10 and can be installed from source:
+GRID requires Python >= 3.10 and is available on PyPI:
 
 ```bash
-git clone https://github.com/domain-independent-dp/grid.git
-cd grid
-pip install -e .
+pip install pygridopt
 ```
 
 The dependencies ([DIDPPy](https://didppy.readthedocs.io/),
-[NetworkX](https://networkx.org/), and NumPy) are installed automatically.
+[NetworkX](https://networkx.org/), and NumPy (https://numpy.readthedocs.io/en/latest/)) are installed automatically.
 
 ## Example
 
