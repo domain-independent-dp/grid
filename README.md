@@ -1,5 +1,3 @@
-cd ~/Desktop/DIDP-Interface/grid
-cat > README.md << 'EOF'
 # GRID
 
 **GRID** (Graph-based modelling Interface for Domain-Independent Dynamic
