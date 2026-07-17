@@ -1,3 +1,5 @@
+cd ~/Desktop/DIDP-Interface/grid
+cat > README.md << 'EOF'
 # GRID
 
 **GRID** (Graph-based modelling Interface for Domain-Independent Dynamic
@@ -24,7 +26,8 @@ pip install pygridopt
 ```
 
 The dependencies ([DIDPPy](https://didppy.readthedocs.io/),
-[NetworkX](https://networkx.org/), and NumPy (https://numpy.readthedocs.io/en/latest/)) are installed automatically.
+[NetworkX](https://networkx.org/), and [NumPy](https://numpy.org/)) are
+installed automatically.
 
 ## Example
 
@@ -64,9 +67,12 @@ print(f"Routes:  {result['Solution']}")
 
 ## Documentation
 
-The documentation includes a quickstart, a guide to native and custom
-features with worked PDPTW and ECVRP examples, and an API reference. To
-build it locally:
+The documentation is available at
+[pygridopt.readthedocs.io](https://pygridopt.readthedocs.io). It includes a
+quickstart, a guide to native and custom features with worked PDPTW and
+ECVRP examples, and an API reference.
+
+To build it locally:
 
 ```bash
 pip install -e ".[docs]"
