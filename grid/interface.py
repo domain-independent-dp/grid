@@ -216,11 +216,11 @@ class Node:
         self.tw_end = tw_end
         self.service_t = service_t
         self.waiting_t = waiting_t
-        self.pickup = pickup if pickup is not None else {}
-        self.delivery = delivery if delivery is not None else {}
+        self.pickup = pickup
+        self.delivery = delivery
         #self.max_pickup_waiting = max_pickup_waiting                           not yet implemented
         #self.max_ride_time = max_ride_time                                     not yet implemented
-        #self.precedence = precedence if precedence is not None else []         not yet implemented
+        #self.precedence = precedence                                           not yet implemented
         #self.profit = profit                                                   not yet implemented
         self.optional = optional
         self.max_visits = max_visits
